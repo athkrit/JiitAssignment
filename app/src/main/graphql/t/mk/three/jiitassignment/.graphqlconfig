@@ -1,0 +1,11 @@
+{
+  "schemaPath": "schema.graphqls",
+  "extensions": {
+    "endpoints": {
+      "Default Introspection Endpoint": {
+        "url": "https://asia-east2-jitta-api.cloudfunctions.net/graphqlDev",
+        "introspect": true
+      }
+    }
+  }
+}

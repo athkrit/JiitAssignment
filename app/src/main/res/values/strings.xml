@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Jiit Assignment</string>
+    <string name="stock_symbol">%s:%s</string>
+    <string name="stock_count">/%s</string>
+
+    <string name="jitta_score_title">JITTA SCORE</string>
+    <string name="jitta_factor_title">Jitta Factors</string>
+    <string name="jitta_signs_title">Jitta Signs</string>
+    <string name="description_title">Description</string>
+    <string name="company_info_title">Company Info.</string>
+
+    <string name="jitta_ranking_title">Jitta Ranking &#35;%s from %s</string>
+
+    <string name="read_more_text">… Read More</string>
+
+    <string name="sector_text">Sector:&#160;</string>
+    <string name="industry_text">Industry:&#160;</string>
+    <string name="website_text">Website:&#160;</string>
+
+</resources>

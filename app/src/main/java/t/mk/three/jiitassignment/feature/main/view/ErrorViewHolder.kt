@@ -1,0 +1,1 @@
+package t.mk.three.jiitassignment.feature.main.viewimport androidx.recyclerview.widget.RecyclerViewimport t.mk.three.jiitassignment.databinding.ViewErrorBindingclass ErrorViewHolder(    private val binding: ViewErrorBinding) : RecyclerView.ViewHolder(binding.root) {    fun init(error: String) {        binding.tvError.text = error    }}

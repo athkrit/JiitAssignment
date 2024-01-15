@@ -1,0 +1,1 @@
+package t.mk.three.jiitassignment.feature.detail.repositoryimport t.mk.three.jiitassignment.StockDetailQueryimport t.mk.three.jiitassignment.data.RankingApolloClientinterface BaseStockDetailRepository {    suspend fun getStockDetail(id: String): RankingApolloClient.Result<StockDetailQuery.Data>}

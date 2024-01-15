@@ -1,0 +1,1 @@
+package t.mk.three.jiitassignment.extensionfun Double.thousands(place: Int = 2): String = "%,.${place}f".format(this)

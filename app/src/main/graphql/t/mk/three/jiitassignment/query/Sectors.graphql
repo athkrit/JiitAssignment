@@ -1,0 +1,1 @@
+query sectors {    listJittaSectorType {        id        name    }}

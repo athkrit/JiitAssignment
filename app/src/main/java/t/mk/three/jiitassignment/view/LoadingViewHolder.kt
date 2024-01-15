@@ -1,0 +1,1 @@
+package t.mk.three.jiitassignment.viewimport androidx.recyclerview.widget.RecyclerViewimport t.mk.three.jiitassignment.databinding.ViewLoadingBindingclass LoadingViewHolder(    binding: ViewLoadingBinding): RecyclerView.ViewHolder(binding.root)

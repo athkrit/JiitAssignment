@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#47c6f1</color>
+    <color name="containerHighlightColor">#0D47C6F1</color>
+
+    <color name="fontPrimary">#111111</color>
+    <color name="fontSecondary">#8b96A0</color>
+    <color name="green">#4CD964</color>
+    <color name="red">#F73939</color>
+    <color name="orange">#E56717</color>
+
+    <color name="containerPrimary">#FFFFFF</color>
+    <color name="containerSecondary">#F2F2F2</color>
+    <color name="containerTertiary">#CACACA</color>
+</resources>

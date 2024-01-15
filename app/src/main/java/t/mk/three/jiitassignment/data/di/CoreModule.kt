@@ -1,0 +1,1 @@
+package t.mk.three.jiitassignment.data.diimport org.koin.dsl.moduleimport t.mk.three.jiitassignment.data.RankingApolloClientval coreModule = module {    single { RankingApolloClient() }}
