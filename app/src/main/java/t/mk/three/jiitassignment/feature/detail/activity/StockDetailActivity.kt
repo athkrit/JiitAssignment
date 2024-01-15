@@ -5,24 +5,15 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.github.mikephil.charting.components.AxisBase
-import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
-import com.github.mikephil.charting.formatter.ValueFormatter
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import t.mk.three.jiitassignment.R
 import t.mk.three.jiitassignment.databinding.ActivityStockDetailBinding
-import t.mk.three.jiitassignment.extension.thousands
 import t.mk.three.jiitassignment.feature.detail.adapter.SignTableAdapter
 import t.mk.three.jiitassignment.feature.detail.adapter.StockDetailAdapter
 import t.mk.three.jiitassignment.feature.detail.viewModel.StockDetailViewModel
@@ -74,6 +65,12 @@ class StockDetailActivity : AppCompatActivity() {
     private fun setupViewListener() {
         binding.rvContainer.adapter = adapter
         binding.rvContainer.layoutManager = LinearLayoutManager(this)
+
+        binding.srlContainer.setOnRefreshListener {
+            binding.srlContainer.isRefreshing = true
+            viewModel.reload(intent?.getStringExtra(STOCK_ID) ?: "")
+            binding.srlContainer.isRefreshing = false
+        }
     }
 
     private fun observeData() {
@@ -89,6 +86,14 @@ class StockDetailActivity : AppCompatActivity() {
                     (getRecyclerViewInternal(it.first).adapter as? SignTableAdapter)?.submitList(it.second)
                 }
             }
+        }
+
+        lifecycleScope.launch {
+            viewModel.canPullToRefresh.flowWithLifecycle(lifecycle, Lifecycle.State.RESUMED)
+                .collect {
+                    binding.srlContainer.isEnabled = it
+                    binding.srlContainer.isRefreshing = it && binding.srlContainer.isRefreshing
+                }
         }
     }
 

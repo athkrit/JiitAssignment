@@ -12,6 +12,7 @@ import com.apollographql.apollo3.cache.normalized.normalizedCache
 import com.apollographql.apollo3.network.okHttpClient
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import java.lang.Exception
 
 
 class RankingApolloClient {
@@ -55,10 +56,14 @@ class RankingApolloClient {
     suspend fun <D : Query.Data> query(
         query: Query<D>
     ): Result<D> {
-        val response = apolloClient
-            .query(query)
-            .fetchPolicy(FetchPolicy.NetworkOnly)
-            .execute()
+        val response = try {
+             apolloClient
+                .query(query)
+                .fetchPolicy(FetchPolicy.NetworkOnly)
+                .execute()
+        } catch (e: Exception) {
+            return Result.Error(e.message ?: "")
+        }
 
         val result = response.data?.let {
             Result.Success(it)

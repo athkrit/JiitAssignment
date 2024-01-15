@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?><resources>    <dimen name="spacing_12">12dp</dimen>    <dimen name="stock_detail_padding">16dp</dimen></resources>
+<?xml version="1.0" encoding="utf-8"?><resources>    <dimen name="spacing_12">12dp</dimen>    <dimen name="stock_detail_padding">16dp</dimen>    <dimen name="line_size">2dp</dimen>    <dimen name="line_length">2dp</dimen></resources>
