@@ -110,7 +110,7 @@ class StockDetailActivity : AppCompatActivity() {
                 clipChildren = false
                 clipToPadding = false
 
-                this.layoutManager = LinearLayoutManager(binding.root.context, RecyclerView.HORIZONTAL, false)
+                this.layoutManager = LinearLayoutManager(this@StockDetailActivity, RecyclerView.HORIZONTAL, false)
                 this.adapter = newAdapter
             }
 
