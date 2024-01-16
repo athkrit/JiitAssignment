@@ -8,10 +8,12 @@
     <string name="jitta_signs_title">Jitta Signs</string>
     <string name="description_title">Description</string>
     <string name="company_info_title">Company Info.</string>
+    <string name="ipo_price_title">IPO price</string>
 
+    <string name="ipo_price_text">Price%s: %s</string>
     <string name="price_title">Price</string>
     <string name="jitta_line_title">Jitta Line</string>
-    <string name="chart_price_text">%s :Price</string>
+    <string name="chart_price_text">%s :Price%s</string>
     <string name="chart_score_text">%s :Score</string>
     <string name="chart_score_over_title">%1$s%2$s\nOver Jitta Line</string>
     <string name="chart_score_under_title">%1$s%2$s\nUnder Jitta Line\n</string>
