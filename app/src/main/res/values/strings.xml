@@ -9,6 +9,13 @@
     <string name="description_title">Description</string>
     <string name="company_info_title">Company Info.</string>
 
+    <string name="price_title">Price</string>
+    <string name="jitta_line_title">Jitta Line</string>
+    <string name="chart_price_text">%s :Price</string>
+    <string name="chart_score_text">%s :Score</string>
+    <string name="chart_score_over_title">%1$s%2$s\nOver Jitta Line</string>
+    <string name="chart_score_under_title">%1$s%2$s\nUnder Jitta Line\n</string>
+
     <string name="jitta_ranking_title">Jitta Ranking &#35;%s from %s</string>
 
     <string name="read_more_text">… Read More</string>
@@ -17,4 +24,5 @@
     <string name="industry_text">Industry:&#160;</string>
     <string name="website_text">Website:&#160;</string>
 
+    <string name="percent_title">&#37;</string>
 </resources>
