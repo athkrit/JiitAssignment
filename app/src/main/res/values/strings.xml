@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jiit Assignment</string>
+    <string name="app_name">Jitta Assignment</string>
     <string name="stock_symbol">%s:%s</string>
     <string name="stock_count">/%s</string>
 
